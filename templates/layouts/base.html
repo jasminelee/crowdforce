@@ -1,0 +1,18 @@
+{% load compress %}
+
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset="utf-8">
+<title>{% block title %}{% endblock %} | Jeremy Blalock</title>
+<link rel='stylesheet' href='{{ STATIC_URL }}css/main.css' type='text/css'>
+<script src="{{ STATIC_URL }}js/adaptive.js"></script>
+<script src="{{ STATIC_URL }}js/main.js"></script>
+</head>
+<body>
+  <div id="wrapper">
+    {% block wrapper %}
+    {% endblock %}
+  </div>
+</body>
+</html>

@@ -1,0 +1,26 @@
+{% extends 'layouts/base.html' %}
+
+{% block title %}Welcome{% endblock %}
+
+{% block wrapper %}
+<header id="top">
+  <h1 id="branding"><a href="/">Crowdforce</a></h1>
+</header>
+<div id="main">
+  {% block main %}
+    Hello?
+  {% endblock %}
+</div>
+<footer id="bottom">
+  <nav id="bottom_nav">
+    <ul>
+      <li><a href="{% url new %}">Home</a></li>
+      <li><a href="{% url about %}">About Us</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+  <div id="copyright">
+    <p>&copy; 2012, Crowdforce. All rights reserved.</p>
+  </div>
+</footer>
+{% endblock %}

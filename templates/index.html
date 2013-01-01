@@ -1,0 +1,35 @@
+{% extends 'layouts/default.html' %}
+
+{% block main %}
+<form method="post" action="{% url new %}">
+  {% csrf_token %}
+  <div class="input text">
+    <input type="text" name="title" value="{{ title }}" placeholder="I'm looking for...">
+    <br>
+    <label>Ex: Frontend Engineer who knows html5</label>
+  </div>
+  <div class="input dropdown">
+    <input type="text" value="{{ amount }}" placeholder="I'll offer a bounty of..." name="bounty">
+    {% comment %}
+    I'll offer a bounty of...
+    <select name="bounty">
+      <option value="5">$5</option>
+      <option value="10">$10</option>
+      <option value="20">$30</option>
+    </select>
+    {% endcomment %}
+    <br>
+    <label>Give your crowd incentive to help you</label>
+  </div>
+  <div class="input text">
+    <textarea name="description" placeholder="Describe the gig..." rows=3>{{ description }}</textarea>
+    <br>
+    <label>Let perspectives know what they'll be doing</label>
+  </div>
+  <div class="input submit">
+    <p>By submitting, you agree to our <a href="{% url terms %}" class="lightbox" target="_blank">terms of service</a>.</p>
+    <input type="submit" value="I Agree, Submit It!">
+  </div>
+</form>
+{% endblock %}
+

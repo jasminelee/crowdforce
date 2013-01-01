@@ -1,0 +1,7 @@
+venv
+*.pyc
+*.swp
+development.sqlite3
+app/local_settings.py
+.sass-cache
+CACHE
